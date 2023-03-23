@@ -5,14 +5,9 @@ from basicsr.archs.deblurL_arch import Deblur_L
 from thop import profile
 from ptflops import get_model_complexity_info
 import torch
-from basicsr.archs.basicvsr_pp_arch import BasicVSRPlusPlus
-# from basicsr.archs.network_rvrt import RVRT
 
 net = Deblur(num_feat=64, num_block=15).cuda()
 # net = Deblur_L(num_feat=64, num_block=30).cuda()
-# net = Deblur(num_feat=64, num_block=15, spynet_path='experiments/pretrained_models/flownet/spynet_sintel_final-3d2a1287.pth').cuda()
-# net = BasicVSRPlusPlus(num_blocks=15, spynet_pretrained='experiments/pretrained_models/flownet/spynet_sintel_final-3d2a1287.pth').cuda()
-# net = RVRT(upscale=1).cuda()
 input_dim = torch.randn(1, 10, 3, 256, 256).cuda()
 flops, params = profile(model=net, inputs=(input_dim, ))
 print(flops/10**9, params/10**6)

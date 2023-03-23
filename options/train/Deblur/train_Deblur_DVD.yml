@@ -52,15 +52,15 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: experiments/Baseline_DVD/models/net_g_2000.pth
+  pretrain_network_g: ~
   strict_load_g: true
-  resume_state: experiments/Baseline_DVD/training_states/2000.state
+  resume_state: ~
 
 # training settings
 train:
   optim_g:
     type: AdamW
-    lr: !!float 1e-4
+    lr: !!float 2e-4
     weight_decay: !!float 1e-4
     betas: [0.9, 0.999]
 
@@ -94,7 +94,7 @@ train:
 
 # validation settings
 val:
-  val_freq: 1000
+  val_freq: 10000
   flip_seq: false
   save_img: false
 

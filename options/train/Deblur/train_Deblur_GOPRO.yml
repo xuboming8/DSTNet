@@ -33,29 +33,28 @@ datasets:
 
   val:
     name: GOPRO
-    type: VideoTestDataset
-    dataroot_gt: /media/xbm/data/VideoDeblur_Dataset/GOPRO/GOPRO_oriname/test/gt
-    dataroot_lq: /media/xbm/data/VideoDeblur_Dataset/GOPRO/GOPRO_oriname/test/blur
+    type: VideoRecurrentSplitClipsTestDataset
+    dataroot_gt: /media/xbm/data/VideoDeblur_Dataset/GOPRO/GOPRO/test/gt
+    dataroot_lq: /media/xbm/data/VideoDeblur_Dataset/GOPRO/GOPRO/test/blur
 
     cache_data: false
     io_backend:
       type: disk
 
-    num_frame: 15
-    padding: reflection_circle
+    num_frame: 10
+    num_overlap: 0
 
 # network structures
 network_g:
   type: Deblur
   num_feat: 64
   num_block: 15
-#  spynet_path: experiments/pretrained_models/flownet/spynet_sintel_final-3d2a1287.pth
 
 # path
 path:
-  pretrain_network_g: experiments/Baseline_gopro_test/models/net_g_10000.pth
+  pretrain_network_g: ~
   strict_load_g: true
-  resume_state: experiments/Baseline_gopro_test/training_states/10000.state
+  resume_state: ~
 
 # training settings
 train:
@@ -73,8 +72,6 @@ train:
 
   total_iter: 300000
   warmup_iter: -1  # no warm up
-#  fix_flow: 5000
-#  flow_lr_mul: 0.125
 
   # losses
   pixel_opt:
@@ -93,7 +90,7 @@ train:
 
 # validation settings
 val:
-  val_freq: 100000
+  val_freq: 10000
   flip_seq: false
   save_img: false
 
