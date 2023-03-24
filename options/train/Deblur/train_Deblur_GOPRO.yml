@@ -1,6 +1,6 @@
 ﻿# general settings
-name: Baseline_gopro_test
-model_type: VideoSingleModel
+name: Baseline_GOPRO
+model_type: VideoRecurrentModel
 scale: 1
 num_gpu: 1  # set num_gpu: 0 for cpu mode
 manual_seed: 0
@@ -9,7 +9,7 @@ manual_seed: 0
 datasets:
   train:
     name: GOPRO
-    type: GOPRODataset
+    type: GOPRORecurrentDataset
     dataroot_gt: /media/xbm/data/VideoDeblur_Dataset/GOPRO/GOPRO_train/train/gt
     dataroot_lq: /media/xbm/data/VideoDeblur_Dataset/GOPRO/GOPRO_train/train/blur
     meta_info_file_train: basicsr/data/meta_info/meta_info_GOPRO_GT.txt
@@ -78,10 +78,6 @@ train:
     type: CharbonnierLoss
     loss_weight: 1.0
     reduction: mean
-
-#  hem_opt:
-#    type: HEM
-#    loss_weight: 2.0
 
   fft_opt:
     type: FFT
