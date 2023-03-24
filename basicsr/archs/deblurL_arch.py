@@ -50,16 +50,6 @@ class Deblur_L(nn.Module):
         # time_start = time.time()
         b, t, c, h, w = lrs.size()
         lrs_feature = self.feat_extractor(rearrange(lrs, 'b t c h w -> b c t h w'))     # b c t h w
-
-        # vis
-        # time_now = time.time()
-        # for i in range(0, t):
-        #     from basicsr.utils import img2tensor, tensor2img
-        #     import cv2
-        #     img = lrs[0, i, :, :, :]
-        #     img_numpy = tensor2img(img)
-        #     cv2.imwrite("./vis/" + str(time_now) + "_img_"+str(i)+".png", img_numpy)
-
         # scale1
         tf_input_feature = rearrange(lrs_feature, 'b c t h w -> (b t) c h w')
         tf_wave1_l, tf_wave1_h = self.wave(tf_input_feature)

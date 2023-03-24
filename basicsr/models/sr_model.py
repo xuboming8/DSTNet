@@ -107,29 +107,6 @@ class SRModel(BaseModel):
         else:
             b, t, c, h, w = self.output.size()
 
-        # import time
-        # time_now = time.time()
-        # for i in range(0, t):
-        #     from basicsr.utils import img2tensor, tensor2img
-        #     import cv2
-        #     img = self.output[0, i, :, :, :]
-        #     img_numpy = tensor2img(img)
-        #     cv2.imwrite("./vis/" + str(time_now) + "_out_"+str(i)+".png", img_numpy)
-        #
-        # for i in range(0, t):
-        #     from basicsr.utils import img2tensor, tensor2img
-        #     import cv2
-        #     img = self.lq[0, i, :, :, :]
-        #     img_numpy = tensor2img(img)
-        #     cv2.imwrite("./vis/" + str(time_now) + "_lq_"+str(i)+".png", img_numpy)
-        #
-        # for i in range(0, t):
-        #     from basicsr.utils import img2tensor, tensor2img
-        #     import cv2
-        #     img = self.gt[0, i, :, :, :]
-        #     img_numpy = tensor2img(img)
-        #     cv2.imwrite("./vis/" + str(time_now) + "_gt_"+str(i)+".png", img_numpy)
-
         l_total = 0
         loss_dict = OrderedDict()
         # pixel loss
