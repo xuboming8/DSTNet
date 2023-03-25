@@ -42,7 +42,7 @@ Quantitative evaluations on the BSD deblurring dataset in terms of PSNR and SSIM
 ## Get Started
 
 ### Pretrained models
-- Models are available in  `'./experiments'`
+- Models are available in  `'./experiments/'`
 
 ### Dataset Organization Form
 If you prepare your own dataset, please follow the following form like GOPRO/DVD:
@@ -66,3 +66,38 @@ If you prepare your own dataset, please follow the following form like GOPRO/DVD
         |--video n
 ```
  
+### Training
+- Download training dataset like above form.
+- Run the following commands:
+```
+Single GPU
+python basicsr/train.py -opt options/train/Deblur/train_Deblur_GOPRO.yml
+Multi-GPUs
+python -m torch.distributed.launch --nproc_per_node=8 --master_port=4321 basicsr/train.py -opt options/train/Deblur/train_Deblur_GOPRO.yml --launcher pytorch
+```
+
+### Testing
+- Models are available in  `'./experiments/'`.
+- Organize your dataset(GOPRO/DVD/BSD) like the above form.
+- Run the following commands:
+```
+python basicsr/test.py -opt options/test/Deblur/test_Deblur_GOPRO.yml
+cd results
+python merge_full.py
+python calculate_psnr.py
+```
+- Before running merge_full.py, you should change the parameters in this file of Line 5,7,9,11.
+- The deblured result will be in `'./results/dataset_name/'`.
+- Before running calculate_psnr.py, you should change the parameters in this file of Line 5,6.
+- We calculate PSNRs/SSIMs by running calculate_psnr.py
+
+## Citation
+```
+@InProceedings{Pan_2023_CVPR,
+    author = {Pan, Jinshan and Xu, Boming and Dong, Jiangxin and Ge, Jianjun and Tang, Jinhui},
+    title = {Deep Discriminative Spatial and Temporal Network for Efficient Video Deblurring},
+    booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition(CVPR)},
+    month = {Feb},
+    year = {2023}
+}
+```
