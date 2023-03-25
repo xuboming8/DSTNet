@@ -1,4 +1,4 @@
-# Deep Discriminative Spatial and Temporal Network for Efficient Video Deblurring(DSTNet)
+# DSTNet
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-green)](https://github.com/xuboming8/CDVD-TSPNL/blob/main/LICENSE)
 [![Python](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/)
@@ -19,7 +19,9 @@ This repository is the official PyTorch implementation of "Deep Discriminative S
 [![ppDnq0A.png](https://s1.ax1x.com/2023/03/25/ppDnq0A.png)](https://imgse.com/i/ppDnq0A)
 
 ## Updates
-[2022-02-28] Paper has been accepted by CVPR2023
+[2022-02-28] Paper has been accepted by CVPR2023\
+[2023-03-25] Training & Testing code is available!
 
+## Experimental Results
 
  
