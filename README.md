@@ -1,7 +1,7 @@
 # DSTNet
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-green)](https://github.com/xuboming8/CDVD-TSPNL/blob/main/LICENSE)
-[![Python](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/pytorch-1.10.1-%237732a8)](https://pytorch.org/)
 
 ### Deep Discriminative Spatial and Temporal Network for Efficient Video Deblurring
@@ -16,7 +16,7 @@ By [Jinshan Pan*](https://jspan.github.io/), Boming Xu*, Jiangxin Dong,  Jianjun
 This repository is the official PyTorch implementation of "Deep Discriminative Spatial and Temporal Network for Efficient Video Deblurring"
 
 ## Network Architecture
-[![ppDnq0A.png](https://s1.ax1x.com/2023/03/25/ppDnq0A.png)](https://imgse.com/i/ppDnq0A)
+[![Architecture](https://s1.ax1x.com/2023/03/25/ppDnq0A.png)](https://imgse.com/i/ppDnq0A)
 
 ## Updates
 [2022-02-28] Paper has been accepted by CVPR2023\
@@ -31,4 +31,38 @@ Quantitative evaluations on the DVD dataset in terms of PSNR and SSIM
 
 Quantitative evaluations on the BSD deblurring dataset in terms of PSNR and SSIM.
 [![BSD](https://s1.ax1x.com/2023/03/25/ppDut1O.png)](https://imgse.com/i/ppDut1O)
+
+## Dependencies
+- Linux (Tested on Ubuntu 18.04)
+- Python 3 (Recommend to use [Anaconda](https://www.anaconda.com/download/#linux))
+- [PyTorch 1.10.1](https://pytorch.org/): `conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cudatoolkit=11.3 -c pytorch -c conda-forge`
+- Install dependent packages :`pip install -r requirements.txt`
+- Install CDVD-TSPNL :`python setup.py develop`
+
+## Get Started
+
+### Pretrained models
+- Models are available in  `'./experiments'`
+
+### Dataset Organization Form
+If you prepare your own dataset, please follow the following form like GOPRO/DVD:
+```
+|--dataset  
+    |--blur  
+        |--video 1
+            |--frame 1
+            |--frame 2
+                ：  
+        |--video 2
+            :
+        |--video n
+    |--gt
+        |--video 1
+            |--frame 1
+            |--frame 2
+                ：  
+        |--video 2
+        	:
+        |--video n
+```
  
