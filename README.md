@@ -37,7 +37,7 @@ Quantitative evaluations on the BSD deblurring dataset in terms of PSNR and SSIM
 - Python 3 (Recommend to use [Anaconda](https://www.anaconda.com/download/#linux))
 - [PyTorch 1.10.1](https://pytorch.org/): `conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cudatoolkit=11.3 -c pytorch -c conda-forge`
 - Install dependent packages :`pip install -r requirements.txt`
-- Install CDVD-TSPNL :`python setup.py develop`
+- Install DSTNet :`python setup.py develop`
 
 ## Get Started
 

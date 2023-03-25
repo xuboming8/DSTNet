@@ -25,7 +25,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: experiments/GOPRO_8.pth
+  pretrain_network_g: experiments/GOPRO.pth
   strict_load_g: true
 
 # validation settingsa
