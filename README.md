@@ -43,7 +43,7 @@ Quantitative evaluations on the BSD deblurring dataset in terms of PSNR and SSIM
 ## Get Started
 
 ### Pretrained models
-- Models are available in  `'./experiments/'`
+- Models are available in  `'./experiments/model_name'`
 
 ### Dataset Organization Form
 If you prepare your own dataset, please follow the following form like GOPRO/DVD:
