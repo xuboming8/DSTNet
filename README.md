@@ -6,7 +6,7 @@
 
 #### [Paper](https://openaccess.thecvf.com/content/CVPR2023/papers/Pan_Deep_Discriminative_Spatial_and_Temporal_Network_for_Efficient_Video_Deblurring_CVPR_2023_paper.pdf) | [Supp](https://openaccess.thecvf.com/content/CVPR2023/supplemental/Pan_Deep_Discriminative_Spatial_CVPR_2023_supplemental.pdf) | [Discussion](https://github.com/xuboming8/DSTNet/issues)
 ### Deep Discriminative Spatial and Temporal Network for Efficient Video Deblurring
-By [Jinshan Pan*](https://jspan.github.io/), Boming Xu*, [Jiangxin Dong](https://cs.njust.edu.cn/c0/f0/c11704a311536/page.htm),  Jianjun Ge and Jinhui Tang
+By [Jinshan Pan*](https://jspan.github.io/), Boming Xu*, [Jiangxin Dong](https://scholar.google.com/citations?user=ruebFVEAAAAJ&hl=zh-CN&oi=ao),  Jianjun Ge and [Jinhui Tang](https://scholar.google.com/citations?user=ByBLlEwAAAAJ&hl=zh-CN)
 
 <hr />
 
