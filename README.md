@@ -87,7 +87,7 @@ cd results
 python merge_full.py
 python calculate_psnr.py
 ```
-- Before running merge_full.py, you should change the parameters in this file of Line 5,7,9,11.
+- Before running merge_full.py, you should change the parameters in this file of Line 5,6,7,8.
 - The deblured result will be in `'./results/dataset_name/'`.
 - Before running calculate_psnr.py, you should change the parameters in this file of Line 5,6.
 - We calculate PSNRs/SSIMs by running calculate_psnr.py
