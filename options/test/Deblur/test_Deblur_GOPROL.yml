@@ -20,7 +20,7 @@ datasets:
 # network structures
 network_g:
   type: Deblur_L
-  num_feat: 64
+  num_feat: 96
   num_block: 30
 
 # path
