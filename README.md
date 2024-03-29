@@ -17,7 +17,7 @@ By [Jinshan Pan*](https://jspan.github.io/), Boming Xu*, [Jiangxin Dong](https:/
 This repository is the official PyTorch implementation of our CVPR2023 paper "Deep Discriminative Spatial and Temporal Network for Efficient Video Deblurring".
 
 ## Network Architecture
-[![pFTVNX8.png](https://s21.ax1x.com/2024/03/30/pFTVNX8.png)](https://imgse.com/i/pFTVNX8)
+[![pFTVd0g.png](https://s21.ax1x.com/2024/03/30/pFTVd0g.png)](https://imgse.com/i/pFTVd0g)
 
 ## Updates
 [2022-02-28] Paper has been accepted by CVPR2023\
