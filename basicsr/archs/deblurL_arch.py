@@ -3,7 +3,7 @@ import time
 from torch import nn as nn
 from basicsr.utils.registry import ARCH_REGISTRY
 from .arch_util import ResidualBlockNoBN, flow_warp, make_layer
-from basicsr.archs.ChanDynamic_GMLP import TransformerBlock
+from basicsr.archs.ChanDynamic_GMLP import CWGDN
 import torch.nn.functional as F
 from basicsr.archs.wave_tf import DWT, IWT
 from basicsr.archs.wave_tf import HaarDownsampling
@@ -33,7 +33,7 @@ class Deblur_L(nn.Module):
         transformer_scale4 = []
         for _ in range(5):
             transformer_scale4.append(
-                nn.Sequential(TransformerBlock(dim=num_feat, ffn_expansion_factor=4, bias=False, LayerNorm_type='WithBias'))
+                nn.Sequential(CWGDN(dim=num_feat, ffn_expansion_factor=4, bias=False, LayerNorm_type='WithBias'))
             )
         self.transformer_scale4 = nn.Sequential(*transformer_scale4)
 

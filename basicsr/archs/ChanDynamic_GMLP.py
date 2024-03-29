@@ -89,9 +89,9 @@ class FeedForward(nn.Module):
 
 
 ##########################################################################
-class TransformerBlock(nn.Module):
+class CWGDN(nn.Module):
     def __init__(self, dim, ffn_expansion_factor, bias, LayerNorm_type):
-        super(TransformerBlock, self).__init__()
+        super(CWGDN, self).__init__()
         self.norm2 = LayerNorm(dim, LayerNorm_type)
         self.ffn = FeedForward(dim, ffn_expansion_factor, bias)
 
