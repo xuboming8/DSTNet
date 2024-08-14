@@ -21,7 +21,7 @@ This repository is the official PyTorch implementation of our CVPR2023 paper "De
 
 ## Updates
 [2022-02-28] Paper has been accepted by CVPR2023\
-[2023-03-25] Training & Testing code is available!
+[2023-03-25] Training & Testing code is available!\
 [2023-02-04] Extended version of DSTNet(DSTNet+) has been created!
 
 ## Experimental Results
