@@ -23,7 +23,7 @@ This repository is the official PyTorch implementation of our CVPR2023 paper "De
 [2022-02-28] Paper has been accepted by CVPR2023\
 [2023-03-25] Training & Testing code is available!\
 [2024-02-04] Our Extended version [DSTNet+](https://github.com/sunny2109/DSTNet-plus) has been created!\
-[2025-03-14] Our Extended version has been accepted by TPAMI
+[2025-03-14] DSTNet+ has been accepted by TPAMI
 
 ## Experimental Results
 Quantitative evaluations on the GoPro dataset. “Ours-L” denotes a large model, where we use 96 features and 30 ResBlocks in the DTFF module.
