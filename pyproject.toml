@@ -1,0 +1,110 @@
+[tool.poetry]
+name = "basicsr"
+version = "1.3.3.10"
+description = "Open Source Image and Video Super-Resolution Toolbox"
+authors = ["Xintao Wang <xintao.wang@outlook.com>"]
+readme = "README.md"
+keywords = ["computer vision", "restoration", "super resolution"]
+homepage = "https://github.com/xinntao/BasicSR"
+license = "Apache-2.0"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+]
+packages = [{include = "basicsr"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+addict = "*"
+future = "*"
+lmdb = "*"
+numpy = "*"
+opencv-python = "*"
+Pillow = "*"
+pyyaml = "*"
+requests = "*"
+scikit-image = "*"
+scipy = "*"
+tb-nightly = "*"
+torch = ">=1.7"
+torchvision = "*"
+tqdm = "*"
+yapf = "*"
+mmcv = "*"
+einops = "*"
+thop = "*"
+ptflops = "*"
+cupy-cuda113 = {version = "*", optional = true}
+cython = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+pytest-mock = "^3.11.1"
+
+# Poetry scripts are not used for testing commands
+# Use 'poetry run pytest' directly instead
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--cov=basicsr",
+    "--cov-report=term-missing",
+    "--cov-report=html:htmlcov",
+    "--cov-report=xml:coverage.xml",
+    "--cov-fail-under=80",
+    "-v",
+]
+markers = [
+    "unit: marks tests as unit tests",
+    "integration: marks tests as integration tests", 
+    "slow: marks tests as slow running tests",
+]
+minversion = "6.0"
+
+[tool.coverage.run]
+source = ["basicsr"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__pycache__/*",
+    "*/setup.py",
+    "*/conftest.py",
+    "*/version.py",
+]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+show_missing = true
+precision = 2
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.coverage.xml]
+output = "coverage.xml"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
